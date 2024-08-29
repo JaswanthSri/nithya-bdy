@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="broicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Paalpacket</title>
+    <link rel="stylesheet" href="testimonials.css">
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <div class="logo-container">
+        <img src="Logo.png" alt="Paalpacket Logo" class="logo">
+    </div>
+
+    <div class="heading-container">
+        <h1 class="testimonials-heading">Testimonials</h1>
+    </div>
+
+    <div class="carousel-container">
+        <button class="arrow-button left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel">
+            <div id="carousel-image-wrapper" class="carousel-image-wrapper">
+                <img id="carousel-image" src="test1.png" alt="Testimonial Image">
+            </div>
+        </div>
+        <button class="arrow-button right-arrow" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const images = [
+            'test1.png', 'test2.png', 'test3.png', 'test4.png', 'test5.png',
+            'test6.png', 'test7.png', 'test8.png', 'test9.png', 'test10.png'
+        ];
+
+        function showSlide(index) {
+            if (index >= images.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = images.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const wrapper = document.getElementById('carousel-image-wrapper');
+            wrapper.classList.add('turn');
+            setTimeout(() => {
+                document.getElementById('carousel-image').src = images[currentSlide];
+                wrapper.classList.remove('turn');
+            }, 500); // Duration of the page turn effect
+        }
+
+        function moveSlide(step) {
+            showSlide(currentSlide + step);
+        }
+    </script>
+</body>
+</html>
