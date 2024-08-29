@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="broicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <link rel="stylesheet" href="mainstyles.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="game-title">Welcome to "Who Am I?"</h1>
+        <img src="rules.png" alt="Rules" class="rules-image">
+    </div>
+    <div class="content">
+        <!-- Your content will go here -->
+    </div>
+    <div class="button-container">
+        <button class="start-button" onclick="startGame()">Start Game</button>
+    </div>
+    
+    <!-- Audio element -->
+    <audio id="intro-audio" src="intro.mp3" preload="auto"></audio>
+ 
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('intro-audio');
+            audio.play();
+        });
+
+        function startGame() {
+            // Set a flag in sessionStorage to indicate that the game has started
+            sessionStorage.setItem('startGame', 'true');
+            // Redirect to the question page
+            location.href = 'question.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="broicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <link rel="stylesheet" href="questionstyles.css">
+</head>
+<body>
+    <!-- Logo -->
+    <img src="Logo.png" alt="Logo" class="logo">
+
+    <!-- Question Number -->
+    <div class="question-number">Question No.1</div>
+
+    <div class="question-container">
+        <p class="question-text">Even though we argue a lot, you are my most favorite person in this world with whom I converse formally as if you are my abroad client.</p>
+        <div class="answer-container">
+            <input type="text" class="answer-box" id="answerBox" placeholder="Who Am I?" autocomplete="off">
+            <button class="hint-button">💡</button>
+        </div>
+        <!-- Submit Button -->
+        <button class="submit-button">Submit</button>
+        <!-- Result Message -->
+        <div class="result-message" id="resultMessage"></div>
+        <!-- Video Container -->
+        <div class="video-container" id="videoContainer">
+            <video id="feedback-video" controlslist="nodownload nofullscreen noremoteplayback" playsinline></video>
+        </div>
+    </div>
+
+    <!-- Next Question Button -->
+    <button class="next-question-button" id="nextQuestionButton" onclick="goToNextQuestion()">Next Question</button>
+
+    <!-- Answer Image -->
+    <img src="1ans.jpg" alt="Answer Image" id="answerImage" class="answer-image">
+
+    <!-- Audio Element -->
+    <audio id="backgroundAudio" src="qnbgm.mp3" preload="auto"></audio>
+
+    <script src="question1.js"></script>
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('backgroundAudio');
+            // Check if the game has started
+            if (sessionStorage.getItem('startGame') === 'true') {
+                // Play the background audio
+                console.log(sessionStorage.getItem('startGame'));
+                audio.play();
+                // Clear the flag
+                sessionStorage.removeItem('startGame');
+            }
+        };
+    </script>
+</body>
+</html>

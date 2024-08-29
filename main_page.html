@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="broicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - Paalpacket</title>
+    <link rel="stylesheet" href="mainstyles.css">
+    <script>
+        // Check if the user is logged in
+        window.onload = function() {
+            if (localStorage.getItem('isLoggedIn') !== 'true') {
+                window.location.href = 'index.html'; // Redirect to the login page if not logged in
+            }
+        };
+
+        // Function to handle Thank You Note popup
+        function showThankYouNote() {
+            const thankYouNotePopup = document.getElementById('thankYouNotePopup');
+            thankYouNotePopup.style.display = 'flex';
+        }
+
+        // Function to handle closing of the Thank You Note popup
+        function closeThankYouNote() {
+            const thankYouNotePopup = document.getElementById('thankYouNotePopup');
+            thankYouNotePopup.style.display = 'none';
+        }
+
+        // Event listeners for popup
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutUsLink = document.getElementById('aboutUsLink');
+            const thankYouNoteButton = document.getElementById('thankYouNoteButton');
+            const thankYouNotePopup = document.getElementById('thankYouNotePopup');
+            const closeButton = document.querySelector('.thank-you-popup .close-button');
+
+            aboutUsLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.getElementById('aboutUsPopup').style.display = 'flex';
+            });
+
+            thankYouNoteButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                showThankYouNote();
+            });
+
+            closeButton.addEventListener('click', function() {
+                closeThankYouNote();
+            });
+        });
+    </script>
+</head>
+<body class="main-page">
+    <div class="header-container">
+        <div class="logo-section">
+            <img src="Logo.png" alt="Paalpacket Logo" class="logo">
+        </div>
+        <div class="navigation">
+            <a href="#" id="aboutUsLink">About Us</a>
+            <a href="game.html">Game</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="#" id="thankYouNoteButton">Thanks Note</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <img src="chumma.jpeg" alt="Image" class="side-image">
+        <div class="info-text">
+            The world shall not believe that you are turning 19 today, given the mami-ness in you that makes you sound like you're 49. Take resolutions to be less rude to your friends (especially one guy), not ghost your friends (especially one guy), walk properly, avoid the black-pink dress combination, and transform your Vada Chennai slang into Vada America slang. Seeing that kid on the left makes me wonder where all that sweetness went over these 19 years.
+            
+            <p>Anyway, happy birthday and enjoy your experience here at Paalpacket!❤️</p>
+        </div>
+    </div>
+    
+    </div>
+
+    <!-- Popup for About Us Login -->
+    <div id="aboutUsPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2 class="popup-heading">Enter secret credentials</h2>
+            <form id="aboutUsForm">
+                <div class="input-container">
+                    <label for="aboutUsUsername">Username:</label>
+                    <input type="text" id="aboutUsUsername" name="username" required>
+                </div>
+                <div class="input-container">
+                    <label for="aboutUsPassword">Password:</label>
+                    <input type="password" id="aboutUsPassword" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup for Thank You Note -->
+    <div id="thankYouNotePopup" class="popup thank-you-popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <img src="tku.png" alt="Thank You" class="thank-you-image">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

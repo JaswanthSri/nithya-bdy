@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="broicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <link rel="stylesheet" href="questionstyles2.css">
+</head>
+<body>
+    <!-- Logo -->
+    <img src="Logo.png" alt="Logo" class="logo">
+
+    <!-- Question Number -->
+    <div class="question-number">Question No.2</div>
+
+    <div class="question-container">
+        <p class="question-text">I'm the lore accurate dora and the maami among all brethren with the highest usage frequency of "Dei poda"</p>
+        <div class="answer-container">
+            <input type="text" class="answer-box" id="answerBox" placeholder="Who Am I?" autocomplete="off">
+            <button class="hint-button" id="hintButton">💡</button>
+        </div>
+        <!-- Submit Button -->
+        <button class="submit-button">Submit</button>
+        <!-- Result Message -->
+        <div class="result-message" id="resultMessage"></div>
+        <!-- Video Container -->
+        <div class="video-container" id="videoContainer">
+            <video id="feedback-video" controlslist="nodownload nofullscreen noremoteplayback" playsinline></video>
+        </div>
+    </div>
+
+    <!-- Next Question Button -->
+    <button class="next-question-button" id="nextQuestionButton" onclick="goToNextQuestion()">Next Question</button>
+
+    <!-- Answer Image -->
+    <img src="2ans.jpg" alt="Answer Image" id="answerImage" class="answer-image">
+
+    <!-- Hint Overlay -->
+    <div id="hintOverlay" class="hint-overlay">
+        <img id="hintImage" src="cl2.jpg" alt="Hint" class="hint-image">
+        <button id="closeHint" class="close-hint">×</button>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="backgroundAudio" src="qnbgm.mp3" preload="auto"></audio>
+
+    <script src="question2.js"></script>
+    <script>
+        // Play the audio when the page loads
+        window.onload = function() {
+            var audio = document.getElementById('backgroundAudio');
+            audio.play();
+        };
+    </script>
+</body>
+</html>

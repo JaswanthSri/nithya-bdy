@@ -1,0 +1,284 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+/* Specific styles for the Loading Page */
+.loading-page {
+    background-color: white !important; /* Force white background */
+    background-image: none !important;  /* Ensure no background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; /* Full viewport width */
+    margin: 0;
+    padding: 0;
+}
+
+/* Specific styles for the Main Page */
+.main-page {
+    background-image: url('bg2.jpg'); /* Background image for the main page */
+    background-size: cover;
+    background-position: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    padding: 20px;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.subtitle p {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Font for subtitle text */
+    font-size: 14px;
+    color: white;
+    margin: 10px 0 0 0; /* Adjust margin to position below the logo */
+}
+
+.navigation {
+    display: flex;
+    gap: 15px; /* Space between links */
+}
+
+.navigation a {
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent color */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker transparent color on hover */
+}
+
+/* Specific styles for the Main Page */
+.main-page .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff3c; /* Adjust as needed */
+}
+
+.logo {
+    height: 40px; /* Adjust the size as needed */
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.main-page .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust based on header height */
+    margin-top: 0; /* Remove any extra margin */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding around content */
+}
+
+.side-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.info-text {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Different font for the write-up */
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for text */
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+/* login popup */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px; /* Increased width of the popup box */
+    position: relative;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Arrange the label and input field vertically */
+    margin-bottom: 20px; /* Add space between each input container */
+}
+
+.input-container label {
+    font-size: 16px;
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.input-container input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Styles for Thank You Note Popup */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.thank-you-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/*  Specific styles for the Game Page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('bg5.jpg'); /* Set bg5.jpg as the background */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the background */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+.title-container {
+    position: absolute;
+    top: 5%; /* Move the title up */
+    width: 100%; /* Full width to center the text */
+    text-align: center; /* Center the text */
+}
+
+.game-title {
+    font-family: Impact, sans-serif; /* Font: Impact */
+    color: #595959; /* Color: #595959 */
+    text-decoration: underline; /* Underline the text */
+    font-size: 2.5rem; /* Increase font size */
+    margin: 0; /* Remove default margin */
+}
+
+.rules-image {
+    display: block;
+    margin: 20px auto; /* Center the image horizontally with some space above and below */
+    max-width: 30%; /* Adjust the size of the image; you can change this as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.button-container {
+    position: absolute;
+    bottom: 20px; /* Space from the bottom */
+    right: 20px; /* Space from the right */
+}
+
+.start-button {
+    background-color: #28a745; /* Green background color */
+    border: none; /* Remove default border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Allow padding to work */
+    font-size: 1rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.start-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Take full height */
+    width: 100%; /* Take full width */
+    color: white;
+    text-align: center;
+}
+

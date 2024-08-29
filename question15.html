@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="broicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <link rel="stylesheet" href="questionstyles2.css">
+</head>
+
+<body>
+    <!-- Logo -->
+    <img src="Logo.png" alt="Logo" class="logo">
+
+    <!-- Question Number -->
+    <div class="question-number">Question No.15</div>
+
+    <div class="question-container">
+        <p class="question-text">Your first-year BFF, obsessed with your ID card, and known for venting my frustrations on people. Lakshman sighting me from the annex mirror revealed a bit of my inner gayness, but "they all get away."</p>
+        <div class="answer-container">
+            <input type="text" class="answer-box" id="answerBox" placeholder="Who Am I?" autocomplete="off">
+            <button class="hint-button" id="hintButton">💡</button>
+        </div>
+        <!-- Submit Button -->
+        <button class="submit-button" id="submitButton">Submit</button>
+        <!-- Result Message -->
+        <div class="result-message" id="resultMessage"></div>
+        <!-- Video Container -->
+        <div class="video-container" id="videoContainer"></div>
+
+        <!-- Next Question Button -->
+        <button class="next-question-button" id="nextQuestionButton" style="display:none;" onclick="goToNextQuestion()">Go To Main Page</button>
+
+        <!-- Answer Image -->
+        <img src="15ans.jpg" alt="Answer Image" id="answerImage" class="answer-image" style="display:none;">
+
+        <!-- Hint Overlay -->
+        <div id="hintOverlay" class="hint-overlay" style="display:none;">
+            <img id="hintImage" src="cl15.jpg" alt="Hint" class="hint-image">
+            <button id="closeHint" class="close-hint">×</button>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="backgroundAudio" src="qnbgm.mp3" preload="auto"></audio>
+    
+    <script src="question15.js"></script>
+    <script>
+        // Play the audio when the page loads
+        window.onload = function() {
+            var audio = document.getElementById('backgroundAudio');
+            audio.play();
+        };
+    </script>
+</body>
+
+</html>
